@@ -3,7 +3,7 @@ let clickValue = 1;
 let upgradeCost = 10;
 let upgradeCost2 = 50;
 let upgradeCost3 = 500;
-let updateCost = 10;
+let updateCost = 500;
 let updateCost2 = 10000;
 
 let upgradeLevel = 0;
