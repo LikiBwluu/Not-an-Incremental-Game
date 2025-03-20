@@ -4,22 +4,62 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title> Not Incremental Game </title>
-        <link rel="stylesheet" href="layout.css">
+        <link rel="stylesheet" href="style.css">
+        
     </head>
     <body>
         <H3>Not Incremental Game</H3>
-        <p>Points : <span id="points">0</span></p>
+        <p id="pointsContainer">
+            Points: <span id="points">0</span> <span id="ppsDisplay">(0/s)</span>
+        </p>
+        
         <button id="clickButton">Click!</button>
 
-        <button id="upgradeButton">Click Upgrade (Cost 10)</button>
+        <button id="upgradeButton">Click Upgrade (Cost: 10)</button>
 
-        <button id="upgradeButton2">??? Upgrade (Cost 50)</button>
+        <button id="upgradeButton2">Finger Upgrade(Cost: 50)</button>
+        <p id="tooltip2" style="display: none;">+1 Point/s</p>
 
-        <button id="updateButton">Update (Cost 500)</button>
+        <button id="upgradeButton3">Hand Upgrade(Cost:500)</button>
+        <p id="tooltip3" style="display: none;">+2 Point/s</p>
+
+
+
+<button id="updateButton">Update (Req: 500)</button>
+<button id="updateButton2">Update 2 (Req: 10K)</button>
+
+</p>
+<script>
+    
+    const button2 = document.getElementById("upgradeButton2");
+    const button3 = document.getElementById("upgradeButton3");
+    const tooltip2 = document.getElementById("tooltip2");
+    const tooltip3 = document.getElementById("tooltip3");
+   
+    button2.addEventListener("mouseenter", function() {
+        tooltip2.style.display = "block";
+    });
+
+    button2.addEventListener("mouseleave", function() {
+        tooltip2.style.display = "none";
+    });
+
+    button3.addEventListener("mouseenter", function() {
+        tooltip3.style.display = "block";
+    });
+
+    button3.addEventListener("mouseleave", function() {
+        tooltip3.style.display = "none";
+    });
+
+
+
+</script>
+
         
-        <div id="popupMessage">You added something to your game..</div>
+        <div id="popupMessage"></div>
         
-
-        <script src="index.js"></script>
+        <script src="script.js"></script>
+        
     </body>
 </html>
